@@ -1,0 +1,16 @@
+<div class="container mt-3">
+    <h3>ltrim-add</h3>
+
+    <div>
+        <form  [formGroup]="userFormGroup">
+          <div class="form-group">
+            <label>Free Text</label>
+            <input type="text" formControlName="freeText" class="form-control"  />
+          
+              Transformed Value :   LeftText--{{userFormGroup["modelInstance"]["freeText"]}}--RightText
+          </div>
+          <button [disabled]="!userFormGroup.valid" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      
+</div>

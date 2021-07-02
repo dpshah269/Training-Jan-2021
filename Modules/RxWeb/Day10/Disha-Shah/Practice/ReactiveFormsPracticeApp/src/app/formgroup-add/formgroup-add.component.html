@@ -1,0 +1,23 @@
+<div class="container mt-3">
+    <h3>formgroup-add</h3>
+
+    <div>
+        <form [formGroup]="userInfoFormGroup">
+            <div class="form-group">
+                <label>User Name</label>
+                <input type="text" formControlName="userName" class="form-control" />
+                <small class="text-danger" *ngIf="userInfoFormGroup.controls.userName.errors?.required">{{
+                    userInfoFormGroup.controls.userName.errors?.required?.message}}</small>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="text" formControlName="password" class="form-control" />
+                <small class="text-danger" *ngIf="userInfoFormGroup.controls.password.errors?.required">{{
+                    userInfoFormGroup.controls.password.errors?.required?.message}}</small>
+            </div>
+
+            <button [disabled]="!userInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+</div>

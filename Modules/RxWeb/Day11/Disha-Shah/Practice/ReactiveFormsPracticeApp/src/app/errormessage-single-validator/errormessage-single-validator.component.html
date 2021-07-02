@@ -1,0 +1,15 @@
+<div class="container mt-3">
+    <h3>errormessage-single-validator</h3>
+
+    <div>
+        <form [formGroup]="userFormGroup">
+            <div class="form-group">
+                <label>UserName</label>
+                <input type="text" formControlName="userName" class="form-control" />
+                <small class="form-text text-danger">{{userFormGroup.controls.userName["errorMessage"]}}<br /></small>
+            </div>
+            <button [disabled]="!userFormGroup.valid" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+</div>

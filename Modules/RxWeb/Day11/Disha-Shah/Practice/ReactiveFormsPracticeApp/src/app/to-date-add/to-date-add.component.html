@@ -1,0 +1,15 @@
+<div class="container mt-3">
+    <h3>to-date-add</h3>
+
+    <div>
+        <form  [formGroup]="userFormGroup">
+          <div class="form-group">
+            <label>Date Of Birth</label>
+            <input type="text" formControlName="dob" class="form-control"  />
+              Transformed Value :   {{userFormGroup["modelInstance"]["dob"]}}
+          </div>
+          <button [disabled]="!userFormGroup.valid" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      
+</div>

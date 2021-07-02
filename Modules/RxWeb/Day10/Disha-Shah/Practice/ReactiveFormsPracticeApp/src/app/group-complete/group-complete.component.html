@@ -1,0 +1,64 @@
+<div class="container mt-3">
+    <h3>group-complete</h3>
+
+    <div>
+        <form [formGroup]="userInfoFormGroup">
+            <div class="form-group">
+                <label>User Name</label>
+                <input type="text" formControlName="userName" class="form-control" />
+                <small class="text-danger" *ngIf="userInfoFormGroup.controls.userName.errors?.required">{{
+                    userInfoFormGroup.controls.userName.errors?.required?.message}}</small>
+
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="text" formControlName="password" class="form-control" />
+                <small class="form-text text-danger"
+                    *ngIf="userInfoFormGroup.controls.password?.errors?.required">{{userInfoFormGroup.controls.password.errors.required.message}}<br /></small>
+                <small class="form-text text-danger"
+                    *ngIf="userInfoFormGroup.controls.password?.errors?.password">{{userInfoFormGroup.controls.password.errors.password.message}}<br /></small>
+
+            </div>
+            <div class="form-group">
+                <label>ConfirmPassword</label>
+                <input type="text" formControlName="confirmPassword" class="form-control" />
+                <small class="form-text text-danger"
+                    *ngIf="userInfoFormGroup.controls.confirmPassword?.errors?.compare">{{userInfoFormGroup.controls.confirmPassword.errors.compare.message}}<br /></small>
+
+            </div>
+            <div class="form-group" [formGroup]="userInfoFormGroup.controls.address">
+                <label>Address</label>
+                <input type="text" formControlName="areaName" class="form-control" />
+
+            </div>
+            <div class="form-group" [formGroup]="hobbyGroup" *ngFor="let hobbyGroup of getFormArray()">
+                <label>name</label>
+                <input type="text" formControlName="name" class="form-control" />
+
+            </div>
+            <button [disabled]="!userInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <div>
+        <h3>Dynamically Create a FormGroup with Dynamic Validation Rules</h3>
+        <form [formGroup]="studentInfoFormGroup">
+            <div class="form-group">
+                <label>Firstname</label>
+                <input type="text" formControlName="firstName" class="form-control" />
+                <small class="text-danger" *ngIf="studentInfoFormGroup.controls.firstName.errors?.required">{{
+                    studentInfoFormGroup.controls.firstName.errors?.required?.message}}</small>
+            </div>
+
+            <div class="form-group">
+                <label>Lastname</label>
+                <input type="text" formControlName="lastName" class="form-control" />
+                <small class="text-danger" *ngIf="studentInfoFormGroup.controls.lastName.errors?.required">{{
+                    studentInfoFormGroup.controls.lastName.errors?.required?.message}}</small>
+            </div>
+
+            <button [disabled]="!studentInfoFormGroup.valid" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+</div>

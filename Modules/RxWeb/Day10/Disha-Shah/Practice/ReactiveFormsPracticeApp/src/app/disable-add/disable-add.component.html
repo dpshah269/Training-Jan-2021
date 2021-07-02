@@ -1,0 +1,15 @@
+<div class="container mt-3">
+    <h3>disable-add</h3>
+
+    <form *ngIf="userFormGroup" [formGroup]="userFormGroup">
+        <div class="form-group">
+        <button class="btn btn-primary" *ngIf="userFormGroup.value.modeType == 'View'" (click)="changeMode()">Change Mode Edit</button>
+        <button class="btn btn-primary" *ngIf="userFormGroup.value.modeType == 'Edit'" (click)="changeMode()">Change Mode View</button>
+          
+      </div>
+      <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" formControlName="fullName" class="form-control"  />
+       </div>  
+      </form>
+</div>

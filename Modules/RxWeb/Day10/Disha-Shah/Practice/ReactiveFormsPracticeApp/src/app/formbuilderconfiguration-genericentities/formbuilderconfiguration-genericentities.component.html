@@ -1,0 +1,13 @@
+<div class="container mt-3">
+    <h3>formbuilderconfiguration-genericentities</h3>
+
+    <form  [formGroup]="studentFormGroup">
+        <div [formGroup]="studentGroup" *ngFor="let studentGroup of getFormArray()">
+          <div class="form-group">
+              <label>Enrollment Number</label>
+              <input type="text" formControlName="enrollmentNumber" class="form-control" />
+          </div>
+          <button [disabled]="!studentFormGroup.valid" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+</div>
