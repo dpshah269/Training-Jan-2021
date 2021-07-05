@@ -1,0 +1,36 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "es2020",
+    "paths": {
+      "@app/database-models": [
+        "src/app/models/database-models"
+      ],
+      "@app/models": [
+        "src/app/models/extended-models"
+      ],
+      "@app/enums": [
+        "src/app/enums"
+      ],
+      "@app/grid-custom-templates": [
+        "src/custom-templates/grid"
+      ]
+    },
+    "lib": [
+      "es2018",
+      "dom"
+    ]
+  },
+  "angularCompilerOptions": {
+    "enableIvy": false
+  }
+}
