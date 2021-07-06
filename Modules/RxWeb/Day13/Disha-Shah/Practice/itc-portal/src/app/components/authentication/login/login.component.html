@@ -1,0 +1,23 @@
+<section class="login text-center container-fluid">
+  <div class="row align-items-center justify-content-center">
+    <div class="login-form col-11 col-md-11 col-lg-11 col-xl-9">
+      <div class="row">
+        <div class="col-md-5 col-xl-4 text-left d-flex align-items-center">
+          <form [formGroup]="userCredentialFormGroup">
+            <div class="form-group mb-3 mb-lg-4 pt-0 pt-sm-1">
+              <label for="email">Email</label>
+              <input type="text" name="email" class="form-control" placeholder="Email" formControlName="userName" autofocus/>
+            </div>
+            <div class="form-group mb-3 mb-lg-4 pt-0 pt-sm-1">
+              <label for="password">Password</label>
+              <input type="password" name="password" class="form-control" placeholder="Password"
+                formControlName="password" />
+            </div>
+            <button class="btn btn-primary" (click)="login()">Login</button><br/>
+            <a routerLink="/forgot-password">Forgot Password?</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

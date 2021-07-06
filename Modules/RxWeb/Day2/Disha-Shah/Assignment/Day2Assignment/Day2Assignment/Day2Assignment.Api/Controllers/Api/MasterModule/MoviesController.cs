@@ -4,12 +4,13 @@ using Day2Assignment.UnitOfWork.Main;
 using Day2Assignment.Models.Main;
 using RxWeb.Core.AspNetCore;
 using RxWeb.Core.Security.Authorization;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Day2Assignment.Api.Controllers.MasterModule
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Access(1)]
+    [AllowAnonymous]
     public class MoviesController : BaseController<Movie,vMovy,Movie>
 
     {
