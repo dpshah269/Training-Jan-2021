@@ -56,7 +56,7 @@ export class AppComponent extends CoreComponent implements OnInit {
       currentHostURIs.push({
         name: 'local',
         default: true,
-        uri: "https://rxwebhttpapi.azurewebsites.net"
+        uri: "https://localhost:44352"
       });
     }
     else if (currentURL.indexOf('uat') > -1) {

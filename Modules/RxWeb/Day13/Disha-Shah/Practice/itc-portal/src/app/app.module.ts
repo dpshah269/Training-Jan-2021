@@ -9,7 +9,6 @@ import { BaseToastr } from './domain/customize-design/toastr';
 import { ModalView } from './domain/customize-design/modal';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
-import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms';
 import { MultiLingualData } from '@rxweb/localization';
 import { routerModule, RxRoutingModule } from '@rxweb/angular-router';
 import { SharedModule } from './components/shared/shared.module';
@@ -43,7 +42,7 @@ MultiLingualData.addOrUpdate('global', {
 
   imports: [
     BrowserModule, route, RxWebModule, FormsModule, ReactiveFormsModule, RxReactiveFormsModule, RxRoutingModule, SharedModule, RxSelectModule
-    , RxTranslateModule,RxReactiveDynamicFormsModule//, HttpClientModule
+    , RxTranslateModule//, HttpClientModule
   ],
   providers: [RxHttp, Title, BaseToastr, ModalView, LoginService,TopBarService],
   bootstrap: [AppComponent],

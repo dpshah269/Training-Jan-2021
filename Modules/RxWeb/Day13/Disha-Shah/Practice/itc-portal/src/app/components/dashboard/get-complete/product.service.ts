@@ -4,25 +4,25 @@ import { HeaderFilter } from "./header-filter";
 
 @xhrFilter([{ model: HeaderFilter }])
 @http({
-  path: "api/Products",
-    hostKey:'local'
+  path: "",
+  hostKey: 'local'
 })
 @Injectable({
   providedIn: 'root'
 })
-export class ProductService extends RxHttp{
+export class ProductService extends RxHttp {
 
-  markAsDirty:boolean;
-    constructor() {
-        super();
-    }
+  markAsDirty: boolean;
+  constructor() {
+    super();
+  }
 
-    addProduct(product?: any) {
-        return this.post({path:'api/SaveProduct', body: product });
-    }
+  addProduct(product?: any) {
+    return this.post({ path: 'api/SaveProduct', body: product });
+  }
 
-    editProduct(product?: any,id?:number){
-       return this.put({path:'api/PutProduct',body:product});
-    }
+  editProduct(product?: any, id?: number) {
+    return this.put({ path: 'api/PutProduct', body: product });
+  }
 
 }
