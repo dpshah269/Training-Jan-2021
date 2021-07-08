@@ -1,0 +1,33 @@
+<div style="margin-left: 1019px;">
+  <select (click)="changeLanguage($event.target.value)">
+    <option value="en">English</option>
+    <option value="fr">French</option>
+  </select>
+</div>
+<h2 class="text-center">{{global.title}}</h2>
+<div class="container">
+  <div class="table-responsive">
+    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper pb-0 dt-bootstrap4">
+      <div class="table-responsive">
+        <div class="dataTables_wrapper pb-0 dt-bootstrap4">
+          <div id="grid"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-nestedformgroup-complete></app-nestedformgroup-complete>
+  <app-dynamicresetform-controls-only></app-dynamicresetform-controls-only>
+  <app-dynamicresetform-defined-props-only></app-dynamicresetform-defined-props-only>
+  <app-dynamicresetform-value></app-dynamicresetform-value>
+  <app-dynamic-validation></app-dynamic-validation>
+  <app-dynamic-basic></app-dynamic-basic>
+  <app-dynamic-custom-sizing></app-dynamic-custom-sizing>
+  <app-dynamic-plain-text></app-dynamic-plain-text>
+  <app-dynamic-disabled-checkbox></app-dynamic-disabled-checkbox>
+  <app-dynamic-disabled-radio></app-dynamic-disabled-radio>
+  <app-dynamic-horizontal-layout></app-dynamic-horizontal-layout>
+  <app-dynamic-inline-form></app-dynamic-inline-form>
+  <app-dynamic-prepend-textbox></app-dynamic-prepend-textbox>
+  <app-asyncvalidation-complete></app-asyncvalidation-complete>
+</div>
