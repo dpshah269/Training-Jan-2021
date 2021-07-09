@@ -1,1 +1,3 @@
-{"title":"Welcome to the app"}
+{"title":"Welcome to the app", "notification": "Hello {{name}}", "conditionalText": "this.meridiem == 'am' ? 'Good Morning' : 'Have a Good Day'", "keyOne": "Key One","nested": {"keyOne": "Nested Key One"}, "validationErrorMessages": {
+    "required": "This Field is Required."
+  }}

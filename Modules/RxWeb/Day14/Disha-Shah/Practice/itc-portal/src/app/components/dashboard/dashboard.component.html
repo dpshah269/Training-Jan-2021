@@ -4,7 +4,17 @@
     <option value="fr">French</option>
   </select>
 </div>
-<h2 class="text-center">{{global.title}}</h2>
+<h2 class="text-center">{{global.title}}, {{global.raw.notification | rxTranslate:{'name':'Munad'} }}</h2>
+<span>{{global.conditionalText}}</span>
+<a (click)="changeMeridiem()">
+  {{meridiem == "am" ? 'Greet Good Day' : 'Greet Good Morning' }}
+</a>
+<tr *ngFor="let key of keys;">
+  <td><span class="badge">{{key}}</span></td>
+  <td>
+    <span class="badge">{{global.get(key)}}</span>
+  </td>
+</tr>
 <div class="container">
   <div class="table-responsive">
     <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper pb-0 dt-bootstrap4">
@@ -30,4 +40,6 @@
   <app-dynamic-inline-form></app-dynamic-inline-form>
   <app-dynamic-prepend-textbox></app-dynamic-prepend-textbox>
   <app-asyncvalidation-complete></app-asyncvalidation-complete>
+  <app-pre-value-hook-complete></app-pre-value-hook-complete>
+  <app-post-value-hook-complete></app-post-value-hook-complete>
 </div>

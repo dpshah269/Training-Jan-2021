@@ -4,6 +4,7 @@ import { access } from '@rxweb/angular-router'
 import { vUser } from '../../view-models/user.model';
 import { AppGrid } from '../../domain/app-grid';
 import { RxTranslation, translate } from '@rxweb/translate';
+
 @access({ accessLevel: 1, action: 'get' })
 @Component({
   selector: 'app-dashboard',
@@ -11,12 +12,15 @@ import { RxTranslation, translate } from '@rxweb/translate';
 })
 export class DashboardComponent {
   @translate() global: { [key: string]: any }
-  constructor(private rxTranslation: RxTranslation) {
-    this.staticData();
-  }
+  meridiem: string = "am";
+  keys: string[] = ["keyOne", "nested.keyOne"];
 
   gridConfig: AppGrid;
   userList = [];
+
+  constructor(private rxTranslation: RxTranslation) {
+    this.staticData();
+  }
 
   ngOnInit() {
 
@@ -49,5 +53,9 @@ export class DashboardComponent {
       { "id": 10, "journalId": 9, "name": "demo3", "displayOrder": 10 },
       { "id": 11, "journalId": 9, "name": "demo4", "displayOrder": 11 },
       { "id": 12, "journalId": 9, "name": "demo5", "displayOrder": 12 }]
+  }
+
+  changeMeridiem() {
+    this.meridiem = this.meridiem == "am" ? "pm" : "am";
   }
 }

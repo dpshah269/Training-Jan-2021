@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {RxReactiveDynamicFormsModule} from '@rxweb/reactive-dynamic-forms'
-
 import { RxReactiveFormsModule } from "@rxweb/reactive-form-validators";
 import { DashboardRoutingModule, ROUTING } from './dashboard.routing';
 import { DashboardComponent } from './dashboard.component';
@@ -24,10 +23,12 @@ import { DynamicHorizontalLayoutComponent } from './dynamic-horizontal-layout/dy
 import { DynamicInlineFormComponent } from './dynamic-inline-form/dynamic-inline-form.component';
 import { DynamicPrependTextboxComponent } from './dynamic-prepend-textbox/dynamic-prepend-textbox.component';
 import { AsyncvalidationCompleteComponent } from './asyncvalidation-complete/asyncvalidation-complete.component';
+import { PreValueHookCompleteComponent } from './pre-value-hook-complete/pre-value-hook-complete.component';
+import { PostValueHookCompleteComponent } from './post-value-hook-complete/post-value-hook-complete.component';
 
 
 @NgModule({
-  declarations: [DashboardComponent, NestedformgroupCompleteComponent, DynamicresetformControlsOnlyComponent, DynamicresetformDefinedPropsOnlyComponent, DynamicresetformValueComponent, DynamicValidationComponent, DynamicBasicComponent, DynamicCustomSizingComponent, DynamicPlainTextComponent, DynamicDisabledCheckboxComponent, DynamicDisabledRadioComponent, DynamicAdvanceLayoutComponent, DynamicHorizontalLayoutComponent, DynamicInlineFormComponent, DynamicPrependTextboxComponent, AsyncvalidationCompleteComponent],
+  declarations: [DashboardComponent, NestedformgroupCompleteComponent, DynamicresetformControlsOnlyComponent, DynamicresetformDefinedPropsOnlyComponent, DynamicresetformValueComponent, DynamicValidationComponent, DynamicBasicComponent, DynamicCustomSizingComponent, DynamicPlainTextComponent, DynamicDisabledCheckboxComponent, DynamicDisabledRadioComponent, DynamicAdvanceLayoutComponent, DynamicHorizontalLayoutComponent, DynamicInlineFormComponent, DynamicPrependTextboxComponent, AsyncvalidationCompleteComponent, PreValueHookCompleteComponent, PostValueHookCompleteComponent],
   imports: [
     CommonModule,FormsModule,ReactiveFormsModule, RxReactiveFormsModule,ROUTING
     , DashboardRoutingModule, RxLocalizationModule, RxRoutingModule,SharedModule, RxReactiveDynamicFormsModule

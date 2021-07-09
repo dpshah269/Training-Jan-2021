@@ -1,1 +1,1 @@
-{"title":"Bienvenue sur l'appli"}
+{"title":"Bienvenue sur l'appli", "notification": "l'appli {{name}}", "conditionalText": "this.meridiem == 'am' ? 'Good Morning' : 'Have a Good Day'"}
