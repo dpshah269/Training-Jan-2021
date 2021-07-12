@@ -1,0 +1,20 @@
+<div style="margin-left: 1019px;">
+  <select (click)="changeLanguage($event.target.value)">
+    <option value="en">English</option>
+    <option value="fr">French</option>
+  </select>
+</div>
+<h2 class="text-center">{{global.title}}</h2>
+<div class="container">
+  <!-- <div class="table-responsive">
+    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper pb-0 dt-bootstrap4">
+      <div class="table-responsive">
+        <div class="dataTables_wrapper pb-0 dt-bootstrap4">
+          <div id="grid"></div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <a routerLink='candidate'>Go to Candidate</a>
+</div>
