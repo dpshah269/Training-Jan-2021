@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewBag.Title = "Computer Shop Management";
+}
+
+<h1>@ViewBag.ItemList</h1>
+<h2>@ViewData["FirstValue"]</h2>
+
+<div>
+    @{
+        for (int i = 0; i < 5; i++)
+        {
+            <h3 style="color:deeppink">Hello world @i</h3>
+        }
+
+        var a = 5;
+        var b = 10;
+        var result = a + b;
+        var str = "Addition of";
+        <h2>@str @a + @b = @result</h2>
+
+        var price = 45;
+        if (@price > 30)
+        {
+            <h3>Price is Higher than 30.</h3>
+        }
+        else if (@price == 30)
+        {
+            <h3>Price is Equal to 30.</h3>
+        }
+        else
+        {
+            <h3>Price is Lower than 30.</h3>
+        }
+
+        <h3>For Loop Example</h3>
+        for (var i = 0; i < 5; i++)
+        {
+            <strong>@i </strong>
+        }
+
+        <h3>While Loop Example</h3>
+        var j = 0;
+        while (j < 5)
+        {
+            <strong>@j </strong>
+            j++;
+        }
+
+        <h3>Do While Loop Example</h3>
+        var k = 0;
+        do
+        {
+            <strong>@k </strong>
+            k++;
+        }
+        while (k < 5);
+
+        <br />
+
+        int[] arr = { 1, 3, 5, 7, 11, 13, 17, 19 };
+        foreach (int x in arr)
+        {
+            <span>@x, </span>
+        }
+
+        try
+        {
+            int x, y, result1;
+            x = 5;
+            y = 0;
+            result1 = a / b;
+            <span>@result1 </span>
+        }
+        catch (Exception ex)
+        {
+            <span>@ex.ToString()</span>
+        }
+
+        <h3><i>Today Date is @DateTime.Now.ToShortDateString()</i></h3>
+
+        var Days = DateTime.Now.DayOfWeek.ToString();
+
+        switch (Days)
+        {
+            case "Sunday": <strong>Its Holiday</strong>
+                break;
+            case "Monday": <strong>Oh no! It's Monday Again</strong>
+                break;
+            case "Tuesday": <strong>Go to Work. It's Tuesday</strong>
+                break;
+            case "Wednesday": <strong>Continue to Work. It's Wednesday</strong>
+                break;
+            case "Thursday": <strong>Continue to Work. It's Thursday</strong>
+                break;
+            case "Friday": <strong>Yeah! It's Friday.</strong>
+                break;
+            case "Saturday": <strong>Hurreyy... It's Saturday.</strong>
+                break;
+            default: <strong>Its Mystrious. I don't know the day name.</strong>
+                break;
+        }
+    }
+</div>
